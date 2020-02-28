@@ -10,7 +10,10 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
-    "lint": "eslint --ext .js,.vue --ignore-path .gitignore ."
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "postbuild": "npm run remove-assets && npm run copy-assets",
+    "remove-assets": "rimraf ../public/assets",
+    "copy-assets": "cpx ./.nuxt/dist/client/** ../public/assets"
   },
   "engines": {
     "node": "10"
@@ -23,15 +26,17 @@
     "@nuxtjs/dotenv": "^1.4.0"
   },
   "devDependencies": {
-    "firebase-functions-test": "^0.1.6",
     "@nuxtjs/eslint-config": "^2.0.0",
     "@nuxtjs/eslint-module": "^1.0.0",
     "babel-eslint": "^10.0.1",
+    "cpx": "^1.5.0",
     "eslint": "^6.1.0",
-    "eslint-plugin-nuxt": ">=0.4.2",
     "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-nuxt": ">=0.4.2",
     "eslint-plugin-prettier": "^3.1.2",
-    "prettier": "^1.19.1"
+    "firebase-functions-test": "^0.1.6",
+    "prettier": "^1.19.1",
+    "rimraf": "^3.0.2"
   },
   "private": true
 }
