@@ -54,5 +54,8 @@ module.exports = {
     extend(config, ctx) {},
     publicPath: '/assets/'
   },
-  srcDir: 'nuxt-src'
+  srcDir: 'nuxt-src',
+  env: {
+    console_process: process.env.NODE_ENV === 'development'
+  }
 }

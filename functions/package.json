@@ -19,11 +19,15 @@
     "node": "10"
   },
   "dependencies": {
+    "@nuxtjs/dotenv": "^1.4.0",
+    "dayjs": "^1.8.21",
+    "firebase": "^7.9.2",
     "firebase-admin": "^8.6.0",
     "firebase-functions": "^3.3.0",
+    "htmlspecialchars": "^1.0.5",
     "nuxt": "^2.0.0",
     "nuxt-buefy": "^0.3.2",
-    "@nuxtjs/dotenv": "^1.4.0"
+    "vuexfire": "^3.2.1"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^2.0.0",
